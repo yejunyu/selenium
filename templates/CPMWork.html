@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block content %}
+  <header class="">
+    <label for="">开始时间:</label>
+    <input type="text" name="" value="">
+    <label for="">结束时间</label>
+    <input type="text" name="" value="">
+    <a href="#">今天</a>
+    <a href="#">昨天</a>
+    <a href="#">近7天</a>
+    <a href="#">近30天</a>
+    <a href="#">本月</a>
+    <a href="#">清空</a>
+    <div class="ui divider"></div>
+    <label for="">投放状态:</label>
+    <select class="" name="">
+      <option value="">不限</option>
+    </select>
+    <label for="">搜索</label>
+    <div class="ui left icon input">
+      <i class="search icon"></i>
+      <input type="text" name="" value="">
+    </div>
+    <button type="button" class="ui circular red mini button">搜索</button>
+    <label for="">当前账户余额:</label>
+    99999
+  </header>
+  <div class="ui red segment">
+    <table class="ui twelve column table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th class="three wide column">投放链接</th>
+        <th>投定量</th>
+        <th>已投放IP</th>
+        <th>已投放PV</th>
+        <th>是否控量</th>
+        <th>状态</th>
+        <th>投放时间</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for cpmwork in cpmworks %}
+      <tr>
+        <td>{{ cpmwork.task_id_id }}</td>
+        <td>{{ cpmwork.url }}<br>
+          备注:{{ cpmwork.remark }}
+        </td>
+        <td>{{ cpmwork.click_nums }}</td>
+        <td>{{ cpmwork.ip_nums }}</td>
+        <td>{{ cpmwork.pv_nums }}</td>
+        {% if cpmwork.is_control == 0 %}
+        <td>否</td>
+        {% elif cpmwork.is_control == 1 %}
+        <td>是</td>
+        {% else %}
+        <td>不控量</td>
+        {% endif %}
+        {% if cpmwork.status == 0 %}
+        <td>未开始</td>
+        {% elif cpmwork.status == 1 %}
+        <td>正在执行</td>
+        {% elif cpmwork.status == 2 %}
+        <td>完成</td>
+        {% else %}
+        <td>状态异常</td>
+        {% endif %}
+        <td>{{ cpmwork.task_time }}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+      <tfoot>
+      <tr>
+        <th colspan="9">
+          <div class="ui right floated pagination menu">
+            <a class="icon item">
+              <i class="left chevron icon"></i>
+            </a>
+            <a class="item">1</a>
+            <a class="item">2</a>
+            <a class="item">3</a>
+            <a class="item">4</a>
+            <a class="icon item">
+              <i class="right chevron icon"></i>
+            </a>
+          </div>
+        </th>
+      </tr>
+      </tfoot>
+    </table>
+  </div>
+{% endblock %}

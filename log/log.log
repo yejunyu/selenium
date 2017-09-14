@@ -1,0 +1,524 @@
+2017-07-25 11:03:44 business/views [line:53]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/business/views.py", line 50, in CPM
+    ClickTask.objects.create(**click_task)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/query.py", line 397, in create
+    obj = self.model(**kwargs)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/base.py", line 537, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/fields/related_descriptors.py", line 211, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "'4'": "ClickTask.user" must be a "UserProfile" instance.
+2017-07-25 11:04:34 business/views [line:54]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/business/views.py", line 50, in CPM
+    ClickTask.objects.create(**click_task)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/query.py", line 397, in create
+    obj = self.model(**kwargs)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/base.py", line 537, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/fields/related_descriptors.py", line 211, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "'4'": "ClickTask.user" must be a "UserProfile" instance.
+2017-07-25 11:06:07 business/views [line:55]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/business/views.py", line 50, in CPM
+    ClickTask.objects.create(**click_task)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/query.py", line 397, in create
+    obj = self.model(**kwargs)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/base.py", line 537, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/fields/related_descriptors.py", line 211, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "'4'": "ClickTask.user" must be a "UserProfile" instance.
+2017-07-26 09:32:34 business/views [line:89]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/business/views.py", line 85, in CPM
+    cpmwork['task_time'] = time.strftime(time.time(),'%Y-%m-%d:%X')
+TypeError: strftime() argument 1 must be str, not float
+2017-07-26 09:51:28 business/views [line:89]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/business/views.py", line 84, in CPM
+    CPMWork.objects.create(**cpmwork)
+AttributeError: 'function' object has no attribute 'objects'
+2017-07-26 09:54:40 business/views [line:89]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/business/views.py", line 84, in CPM
+    CPMWork.objects.create(**cpmwork)
+AttributeError: 'function' object has no attribute 'objects'
+2017-07-26 09:54:45 business/views [line:89]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/business/views.py", line 84, in CPM
+    CPMWork.objects.create(**cpmwork)
+AttributeError: 'function' object has no attribute 'objects'
+2017-07-26 09:55:54 business/views [line:89]: Traceback (most recent call last):
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 110, in execute
+    return self.cursor.execute(query, args)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/MySQLdb/connections.py", line 292, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1054, "Unknown column 'task_time' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/business/views.py", line 84, in CPM
+    CPMWork.objects.create(**cpmwork)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 110, in execute
+    return self.cursor.execute(query, args)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/MySQLdb/connections.py", line 292, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'task_time' in 'field list'")
+2017-07-26 16:46:57 business/views [line:89]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/business/views.py", line 44, in CPM
+    raise Exception(u"投放ip请输入数字")
+Exception: 投放ip请输入数字
+2017-08-09 13:00:00 tasks [line:79]: start:fa64e204117f59f6c872b65ee5346ccf time: 13:00:00
+count:416
+2017-08-09 13:00:02 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:00:02 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:00:02 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:00:03 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:00:04 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:00:05 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:00:06 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:00:07 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:00:08 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:00:09 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:01:03 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:01:03 browser [line:49]: too many requests
+2017-08-09 13:01:03 browser [line:49]: too many requests
+2017-08-09 13:01:04 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:01:05 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:01:06 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:01:07 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:01:08 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:01:09 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:01:10 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:02:04 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:02:04 browser [line:49]: too many requests
+2017-08-09 13:02:04 browser [line:49]: too many requests
+2017-08-09 13:02:05 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:02:06 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:02:07 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:02:08 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:02:09 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:02:10 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:02:11 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:03:04 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:03:05 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:03:05 browser [line:49]: too many requests
+2017-08-09 13:03:06 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:03:07 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:03:08 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:03:10 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:03:11 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:03:12 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:03:12 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:04:06 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:04:07 browser [line:49]: too many requests
+2017-08-09 13:04:07 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:04:08 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:04:09 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:04:10 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:04:11 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:04:12 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:04:13 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:04:14 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:05:07 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:05:08 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:05:08 browser [line:49]: too many requests
+2017-08-09 13:05:09 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:05:10 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:05:11 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:05:12 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:05:13 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:05:14 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:05:15 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:06:08 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:06:09 browser [line:49]: too many requests
+2017-08-09 13:06:09 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:06:10 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:06:11 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:06:12 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:06:13 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:06:14 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:06:15 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:06:16 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:07:09 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:07:10 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:07:10 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:07:11 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:07:12 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:07:13 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:07:14 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:07:15 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:07:16 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:07:17 browser [line:49]: {"msg":"订单号码已经过期, 如需继续使用请充值续费！","success":false}
+2017-08-09 13:12:00 tasks [line:79]: start:fa64e204117f59f6c872b65ee5346ccf time: 13:12:00
+count:416
+2017-08-09 13:14:34 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:17:28 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: 59.010
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:17:31 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:17:32 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:17:32 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:17:34 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:17:40 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:17:42 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:17:53 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:18:12 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:19:11 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:19:13 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:19:17 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:19:19 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:19:20 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:19:21 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:19:21 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:19:22 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 13:19:27 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 14:12:00 tasks [line:79]: start:fa64e204117f59f6c872b65ee5346ccf time: 14:12:00
+count:416
+2017-08-09 14:15:52 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-09 14:16:47 browser [line:97]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/browser/browser.py", line 57, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.8.0-58-generic x86_64)
+
+2017-08-10 10:30:53 business/views [line:89]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/business/views.py", line 44, in CPM
+    raise Exception(u"投放ip请输入数字")
+Exception: 投放ip请输入数字
+2017-08-10 11:26:53 business/views [line:89]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/business/views.py", line 49, in CPM
+    raise Exception(u'任务日期小于当前时间,请检查!')
+Exception: 任务日期小于当前时间,请检查!
+2017-08-11 09:32:41 business/views [line:175]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/business/views.py", line 125, in CPC
+    md5.update((url + str(time.time())).encode('utf8'))
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+2017-08-16 09:20:54 browser [line:99]: Traceback (most recent call last):
+  File "apps/browser/browser.py", line 77, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.10.0-32-generic x86_64)
+
+2017-08-16 09:21:59 browser [line:99]: Traceback (most recent call last):
+  File "apps/browser/browser.py", line 56, in browser_click1
+    driver.get(url)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 268, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 256, in execute
+    self.error_handler.check_response(response)
+  File "/home/yy/.virtualenvs/django-python3/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=59.0.3071.104)
+  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.10.0-32-generic x86_64)
+
+2017-08-21 10:37:16 business/views [line:176]: Traceback (most recent call last):
+  File "/home/yy/PycharmProjects/adClick/apps/business/views.py", line 130, in CPC
+    raise Exception(u"投放ip请输入数字")
+Exception: 投放ip请输入数字

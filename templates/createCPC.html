@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<!-- 引入组件 -->
+<link href="{% static "css/calendar.min.css" %}" rel="stylesheet" >
+<script src="{% static "js/calendar.min.js" %}" charset="utf-8"></script>
+
+<fieldset class="ui red segment">
+  <legend><h3 class="ui green header">CPC业务</h3></legend>
+
+  <form id="CPC" class="ui fluid form" action="/CPC/" method="post">
+    <div class="inline field">
+      <label for="task_area">选择地区(可选):</label>
+      <input type="text" name="task_area" value="0">
+    </div>
+    <div class="inline field">
+      <label for="flow_demand">流量需求方式</label>
+      <input type="radio" name="flow_demand" checked="true" value="0">普通点击业务
+      <input type="radio" name="flow_demand" disabled value="1">高级点击业务
+      <input type="radio" name="flow_demand" disabled value="2">Flash点击
+      <input type="radio" name="flow_demand" disabled value="3">消耗类点击
+    </div>
+    <div id="refersetting" class="inline field">
+      <label for="referer">来源设定:</label>
+      <input type="text" name="referer" value="">
+      多个来源以http://开头用;分隔
+    </div>
+    <div id="remaintime" class="inline field">
+      <label for="remaintime">停留时间:</label>
+      <input type="text" name="remaintime" value="30">
+      秒
+    </div>
+    <div class="inline field">
+      <label for="url">投放URL:</label>
+      <input type="text" name="url" value="http://">
+    </div>
+    <div class="inline field">
+      <label for="jffs">投放CPC计费方式:</label>
+      <input type="radio" name="jffs" checked="true" value="0">按IP计费
+      <input type="radio" name="jffs" disabled value="1">按UV计费
+    </div>
+    <div class="inline field">
+      <label for="tfip">投放IP量:</label>
+      <input id="task_count" type="text" name="tfip" value="" placeholder="请输入...">
+    </div>
+    <div class="inline field">
+      <label for="pvbs">单IP点击数</label>
+      <select class="" name="pvbs">
+        <option value="1" selected="selected">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+    <div class="inline field">
+      <label for="is_control">是否控量</label>
+      <select class="" name="is_control">
+        <option value="0" selected="selected">否</option>
+        <option value="1">是</option>
+      </select>
+      选否将平均下发
+    </div>
+    <table class="ui twelve column table" id="time_task" style="display: none">
+      <thead>
+      <tr>
+        <th>00H</th>
+        <th>01H</th>
+        <th>02H</th>
+        <th>03H</th>
+        <th>04H</th>
+        <th>05H</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><input type="text" value="" id="00" name="0"></td>
+        <td><input type="text" value="" id="01" name="1"></td>
+        <td><input type="text" value="" id="02" name="2"></td>
+        <td><input type="text" value="" id="03" name="3"></td>
+        <td><input type="text" value="" id="04" name="4"></td>
+        <td><input type="text" value="" id="05" name="5"></td>
+      </tr>
+      </tbody>
+      <thead>
+      <tr>
+        <th>06H</th>
+        <th>07H</th>
+        <th>08H</th>
+        <th>09H</th>
+        <th>10H</th>
+        <th>11H</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><input type="text" value="" id="06" name="6"></td>
+        <td><input type="text" value="" id="07" name="7"></td>
+        <td><input type="text" value="" id="08" name="8"></td>
+        <td><input type="text" value="" id="09" name="9"></td>
+        <td><input type="text" value="" id="10" name="10"></td>
+        <td><input type="text" value="" id="11" name="11"></td>
+      </tr>
+      </tbody>
+      <thead>
+      <tr>
+        <th>12H</th>
+        <th>13H</th>
+        <th>14H</th>
+        <th>15H</th>
+        <th>16H</th>
+        <th>17H</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><input type="text" value="" id="12" name="12"></td>
+        <td><input type="text" value="" id="13" name="13"></td>
+        <td><input type="text" value="" id="14" name="14"></td>
+        <td><input type="text" value="" id="15" name="15"></td>
+        <td><input type="text" value="" id="16" name="16"></td>
+        <td><input type="text" value="" id="17" name="17"></td>
+      </tr>
+      </tbody>
+      <thead>
+      <tr>
+        <th>18H</th>
+        <th>19H</th>
+        <th>20H</th>
+        <th>21H</th>
+        <th>22H</th>
+        <th>23H</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><input type="text" value="" id="18" name="18"></td>
+        <td><input type="text" value="" id="19" name="19"></td>
+        <td><input type="text" value="" id="20" name="20"></td>
+        <td><input type="text" value="" id="21" name="21"></td>
+        <td><input type="text" value="" id="22" name="22"></td>
+        <td><input type="text" value="" id="23" name="23"></td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <th><button type="button" class="ui button" onclick="clearData()">初始化零</button></th>
+        <th><button type="button" class="ui button" onclick="moni(1)">模拟比例一</button></th>
+        <th><button type="button" class="ui button" onclick="moni(2)">模拟比例二</button></th>
+        <th><button type="button" class="ui button" onclick="currentMoni(1)">当前比例一</button></th>
+        <th><button type="button" class="ui button" onclick="currentMoni(2)">当前比例二</button></th>
+        <th><button type="button" class="ui button" onclick="checkData()">查看曲线</button></th>
+      </tr>
+      </tfoot>
+    </table>
+    <div class="inline field">
+      <label for="task_time">任务开始日期:</label>
+      <div class="ui calendar" id="example1">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="日期" value="" name="task_time">
+        </div>
+      </div>
+    </div>
+    <div class="inline field">
+      <label for="pzff">配置方法:</label>
+      <input type="radio" name="pzff" checked="true" value="0">精准点击
+      <input type="radio" name="pzff" disabled value="1">区域点击
+      <input type="radio" name="pzff" value="2">随机点击
+    </div>
+    <div class="inline field" id="pznr">
+      <label for="pznr">配置内容:</label>
+      代码片段:<input type="text" name="codeGist">(只能填一个)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      元素:<input type="text" name="codeElement">(只能填一个)<br>
+    </div>
+    <div class="inline field" id="pz" style="display: none">
+      <label for="pz">配置:</label>
+      点击深度:
+      <select class="" name="click_deepth">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2" selected="selected">2</option>
+        <option value="3">3</option>
+      </select>
+      是否随机深度:
+      <select class="" name="is_random_deepth">
+        <option value="0">否</option>
+        <option value="1">是</option>
+      </select>
+      随机概率:
+      <input id="task_bili" type="text" name="task_bili" value="75" style="width: 60px">%
+    </div>
+    <div class="inline field">
+      <label for="">二跳停留时间:</label>
+      <input id="task_count" type="text" name="sectime" value="15" style="width: 60px">(0~30)
+    </div>
+    <div class="inline field">
+      <label for="remark">备注:</label>
+      <textarea name="remark" rows="5" cols="10"></textarea>
+    </div>
+    <div class="inline field">
+      <label for="">本次业务总费用:</label>
+      <label for="">0</label>
+    </div>
+    <div class="inline field">
+      <label for="">账号剩余金额:</label>
+      <label for="">9999</label>
+    </div>
+    <input type="text" name="user_id" value="{{ user.id }}" style="display: none">
+    <button type="submit" name="submit" class="ui orange button">添加业务</button>
+    <button type="reset" name="reset" class="ui button">取消</button>
+    {% csrf_token %}
+  </form>
+</fieldset>
+<script>
+    $('#example1').calendar({
+        type: 'date',
+        formatter: { // 自定义日期的格式
+            date: function(date, settings) {
+                if (!date) return '';
+                var year  = date.getFullYear();
+                var month = date.getMonth() + 1;
+                var day   = date.getDate();
+                month = month < 10 ? '0'+month : month;
+                day   = day   < 10 ? '0'+day   : day;
+                return year + '-' + month + '-' + day;
+            }
+        },
+        text: {
+            days: ["日", "一", "二", "三", "四", "五", "六"],
+            months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+            monthsShort: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+        },
+    });
+</script>
+  <script src="{% static "js/createCPC.js" %}"></script>
+{% endblock %}

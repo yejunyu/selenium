@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <title>聚诚仁和</title>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{% static "js/semantic.min.js" %}"></script>
+  <link rel="stylesheet" href="{% static "css/semantic.min.css" %}">
+  <link REL="SHORTCUT ICON" HREF="{% static "favicon.ico" %}">
+  <style>
+
+  </style>
+</head>
+<body>
+<header class="ui basic vertical segment" style="padding-right: 60px;">
+  <div class="ui black text menu">
+    <div class="right menu">
+      <div class="item">
+        欢迎您: {{ user.username }}|<a href="{% url "login" %}">退出</a>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="ui red basic very padded segment">
+  <div class="ui grid">
+    <div class="four wide column">
+      <div class="ui mini buttons">
+        <div class="ui red button" style="padding-top: 15%;">
+          充值
+        </div>
+        <div class="ui vertical buttons">
+          <a href="{% url "createCPM" %}"><button type="button" name="button" class="ui button">新建CPM业务</button></a>
+          <a href="{% url "createCPC" %}"><button type="button" name="button" class="ui button">新建CPC业务</button></a>
+        </div>
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui accordion">
+        <div class="active title"><h3 class="ui header">业务明细<i class="dropdown icon"></i></h3></div>
+        <div class="active content">
+          <div class="ui vertical menu">
+            <a href="{% url "CPMTask" %}" class="item">CPM业务</a>
+            <a href="{% url "CPCTask" %}" class="item">CPC业务</a>
+            <a href="/rankWork/" class="item">排名业务</a>
+            <a href="/CPMHistory/" class="item">CPM历史数据</a>
+            <a href="/CPCHistory/" class="item">CPC历史数据</a>
+            <a href="/URLlist/" class="item">多URL列表</a>
+          </div>
+        </div>
+        <div class="title"><h3 class="ui header">消费明细<i class="dropdown icon"></i></h3></div>
+        <div class="content">
+          <div class="ui vertical menu">
+            <a href="/chargeRecord/" class="item">我的充值记录</a>
+            <a href="/purchaseRecord/" class="item">我的消费记录</a>
+          </div>
+        </div>
+        <div class="title"><h3 class="ui header">系统设置<i class="dropdown icon"></i></h3></div>
+        <div class="content">
+          <div class="ui vertical menu">
+            <a href="emailBox" class="item">收件箱</a>
+            <a href="user" class="item">账号维护</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="twelve wide column">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+</div>
+<footer class="ui vertical inverted segment">
+  <h3 class="ui header center aligned">
+    聚诚仁和 &copy; 版权所有
+    <p class="sub header" style="color:grey">联系电话: 1234567890</p>
+  </h3>
+</footer>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.ui.accordion').accordion();
+    });
+</script>
+</body>
+</html>
